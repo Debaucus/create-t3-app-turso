@@ -3,10 +3,14 @@ import { type Config } from "drizzle-kit";
 import { env } from "~/env.mjs";
 
 export default {
-  schema: "./src/server/db/schema.ts",
-  driver: "mysql2",
+  schema: "./src/server/db/schema-sqlite.ts",
+  out: "./src/server/db/migrations",
+  driver: "turso",
   dbCredentials: {
-    connectionString: env.DATABASE_URL,
+    url: env.DATABASE_URL,
+    authToken: env.DATABASE_AUTH,
   },
-  tablesFilter: ["create-t3-app-turso_*"],
+  verbose: true,
+  strict: true,
+  tablesFilter: ["t3_turso_*"],
 } satisfies Config;

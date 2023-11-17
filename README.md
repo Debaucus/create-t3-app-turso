@@ -1,8 +1,21 @@
-# What is the version of Create T3 App?
+# What is this version of Create T3 App?
 
 This is a pre-CLI complete with Tailwind, Drizzle, TRPC and Next Auth accepted. You can copy the changes and use Drizzle with your own prefered options.
 
 The main goal is to use Turso with Create T3 App as 500 databases provided by Turso allows for many versions and prototypes.
+
+## How to run:
+
+- Create a database on Turso, this will provide your `DATABASE_URL`.
+- Get a token for that Database, this is your `DATABASE_AUTH` code.
+- Use your usual Auth method, by default T3 App uses Discord.
+
+Once complete, do the following:
+
+- `npm install`
+- `npm run db:generate`
+- `npm run db:push`
+- `npm run dev`
 
 # Create T3 App
 

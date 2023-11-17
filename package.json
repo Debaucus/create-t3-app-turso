@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "db:push": "dotenv drizzle-kit push:mysql",
+    "db:generate": "dotenv drizzle-kit generate:sqlite",
+    "db:push": "dotenv drizzle-kit push:sqlite",
     "db:studio": "dotenv drizzle-kit studio",
     "dev": "next dev",
     "lint": "next lint",
@@ -12,6 +13,7 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.5",
+    "@libsql/client": "^0.4.0-pre.1",
     "@planetscale/database": "^1.11.0",
     "@t3-oss/env-nextjs": "^0.7.0",
     "@tanstack/react-query": "^4.32.6",
@@ -19,6 +21,7 @@
     "@trpc/next": "^10.37.1",
     "@trpc/react-query": "^10.37.1",
     "@trpc/server": "^10.37.1",
+    "better-sqlite3": "^9.1.1",
     "drizzle-orm": "^0.28.5",
     "next": "^14.0.0",
     "next-auth": "^4.24.4",
